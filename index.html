@@ -1,0 +1,609 @@
+ <html>
+<head>
+  <title> CSS Flexbox Guide</title>
+<link rel="stylesheet" href="css/technical-documentation.css">
+</head>
+
+<body>
+<nav id="navbar" role="main" class="leftcolumn">
+ <header>
+  <h1>Techinal Documentation For CSS Flexboxes and Grid Layouts </h1>
+    <a class="nav-link" href="#initialise_flexbox">Initialise Flexbox</a><br><br>
+    <a class="nav-link" href="#flexbox_direction">Flexbox Direction</a><br><br>
+    <a class="nav-link" href="#justify_content">Justify Content</a><br><br>
+    <a class="nav-link" href="#align_items">Align Items</a><br><br>
+    <a class="nav-link" href="#align_self">Align Self</a><br><br>
+    <a class="nav-link" href="#flex_grow">Flex Grow</a><br><br>
+    <a class="nav-link" href="#flex_shrink">Flex Shrink</a><br><br>
+    <a class="nav-link" href="#flex_basis">Flex Basis</a><br><br>
+    <a class="nav-link" href="#order">Order</a><br><br>
+    <a class="nav-link" href="#flex_wrap">Flex Wrap</a><br><br>
+    <a class="nav-link" href="#align_content">Align Content</a><br><br>
+    <a class="nav-link" href="#flex_shorthand">Flex Shorthand</a><br><br>
+    <a class="nav-link" href="#conclusion">Conclusion</a><br><br>
+
+ </header>
+</nav>
+
+
+ <main id="main-doc">
+<section id=main>
+
+<div id="welcome-section">
+  <h1>Welcome. Thanks for stopping by.</h1>
+  <ul id="welcome-list">
+    <li>HTML and CSS are powerful tools for creating web pages and controlling the way they look.</li>
+    <li>In terms of layout, one of the most effective features is the CSSFlexbox.</li>
+    <li>The concepts can seem complex at first but experience reveals their intuitiveness.</li>
+    <li>This page acts as a cheatsheet giving examples of Flexbox features in different environments.</li>
+    <li>This game <a href="">Flexbox Zombies</a> was extremely useful to me in helping to memorise and visualise these features - check it out!</li>
+    <li>This project was made to be submitted as a freecodecamp.org responsive web design project - check out their original documentation and learn for yourself at the <a href="https://www.freecodecamp.org/learn/responsive-web-design/#css-flexbox">freecodecamp.org HTML and CSS course</a> and <a href="https://www.freecodecamp.org/news/flexbox-the-ultimate-css-flex-cheatsheet/">cheatsheet.</a> </li>
+  </ul>
+</div>
+<br>
+<hr>
+<br>
+
+  <section class="main-section" id="initialise_flexbox">
+    <header>
+      <h2>Initialise Flexbox<h2>
+    </header>
+  <ul>
+    <li>Flexbox is initialised by adding the following command to a class or id.</li>
+    <li>In 'Flexbox Zombies', this command is placed inside of the crossbow {} class to arm the player's crossbow.</li>
+  </ul>
+
+    <div id="container-CSS">
+    <h3>CSS to Initialise Flexbox:</h3>
+
+    <code class="code-box">
+      display: flexbox <br>
+OR <br>
+      display: inline-flex;<br>
+    </code>
+  </div>
+<br>
+<h3>Notes:</h3>
+    <ul>
+      <li>inline-flex makes the flex container display inline.</li>
+    </ul>
+    <p></p>
+  </section>
+
+  <br>
+  <hr>
+  <br>
+
+
+  <section class="main-section" id="flexbox_direction">
+    <header>
+      <h2>Flexbox Direction<h2>
+
+    </header>
+<ul>
+  <li>Flexbox direction is set horizontally, vertically or mirrored with the following CSS code.</li>
+  <li>In 'Flexbox Zombies', this command sets the direction of aim for the player's crossbow depending on facing direction and zombie approach direction.</li>
+</ul>
+    <div id="container-CSS">
+    <h3>CSS to Set Flexbox Direction:</h3>
+
+    <code class="code-box">
+      flex-direction: row <br>
+      flex-direction: row-reverse <br>
+      flex-direction: column <br>
+      flex-direction: column-reverse <br>
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value: row (left->right)</li>
+        <li>Column sets direction from top to bottom</li>
+        <li>row-reverse sets right->left and column-reverse bottom->top</li>
+      </ul>
+      <p></p>
+
+  </section>
+
+<br>
+<hr>
+<br>
+
+  <section class="main-section" id="justify_content">
+    <header>
+      <h2>Justify Content<h2>
+    </header>
+    <ul>
+      <li>Justify content is used to define the alignment along the main axis of the flexbox using the following CSS code.</li>
+      <li>In 'Flexbox Zombies', this command sets the target finder of the crossbow to different positions on the field relative to flex-direction e.g. using justify-content:flex-end to target a zombie at the end of the row or column. </li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to Justify Content (main-axis):</h3>
+
+    <code class="code-box">
+      justify-content: flex-start <br>
+      justify-content: flex-end <br>
+      justify-content: center <br>
+      justify-content: space-between <br>
+      justify-content: space-around <br>
+
+    </code>
+  </div>
+
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value: justify-content: flex-start</li>
+        <li>space-around will have gaps at the margins whereas space-between will have none</li>
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+
+
+
+
+  <section class="main-section" id="align_items">
+    <header>
+      <h2>Align Items<h2>
+    </header>
+    <ul>
+      <li>Align Items is used to define the alignment along the cross axis of the flexbox (perpendicular to main-axis) using the following CSS.</li>
+      <li>In 'Flexbox Zombies', this command sets the target finder of the crossbow to different positions on the field relative to flex-direction e.g. using align-items: flex-start on a flex-direction: row will aim for zombies at the top of the field.</li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to Align Items (cross-axis):</h3>
+
+    <code class="code-box">
+    align-items: flex-start;<br>
+    align-items: flex-end;<br>
+    align-items: flex-stretch;<br>
+    align-items: flex-center;<br>
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value: stretch (fill container)</li>
+            </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="align_self">
+    <header>
+      <h2>Align Self<h2>
+    </header>
+    <ul>
+    <li>Align Self is used to define the position of an anomalous value in a series of flex items.</li>
+    <li>In 'Flexbox Zombies', a new class is created in addition to the crossbow class for the zombie that is out of the axis of aiming or justify/stretch properties.
+      <li>The player is then able to tartget zombies along the main alignment as well as the anomaly.</li>
+    </ul>
+
+    <div id="container-CSS">
+    <h3>CSS to Align Self:</h3>
+
+    <code class="code-box">
+      align-self: flex-start;<br>
+      align-self: flex-end;<br>
+      align-self: flex-stretch;<br>
+      align-self: flex-center;<br>
+
+      <h3 id="container-CSS">In 'Flexbox Zombies' where two are along the center of the field X-Axis and one is at the top:</h3>
+
+      crossbow {<br>
+        display: flex;<br>
+        justify-content: flex-end;<br>
+        align-items: center;<br>
+      }<br>
+<br>
+      .target:nth-of-type(2) {<br>
+        align-self: flex-start;<br>
+      }<br>
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default: flex-start</li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+
+  <section class="main-section" id="flex_grow">
+    <header>
+      <h2>Flex Grow<h2>
+    </header>
+    <ul>
+      <li>The flex grow setting is about ratios, for example if we set the property to flex-grow: 1; items in the class will grow to fill the available space at the same rate.</li>
+      <li>Different values make items grow at different speed rations e.g.in two classes with flex-grow: 1; and flex-grow:2; two will take 2 pixels for 1's 1.</li>
+      <li>    In 'Flexbox Zombies' when there is extra space, the target item will grow to fill it along the direction you are aiming at the ratios you declare.</li>
+    </ul>
+
+
+    <div id="container-CSS">
+    <h3>CSS to flex-grow flex items:</h3>
+
+    <code class="code-box"><br>
+      flex-grow: n;<br>
+<br>
+      <h3 id="container-CSS">Using flex-grow in 'Flexbox Zombies' to aim at targets growing at a ratio of 3:1: </h3><br>
+      .target:nth-of-type(1) {<br>
+        flex-grow: 3;<br>
+      }<br>
+<br>
+      .target:nth-of-type(2) {<br>
+        flex-grow: 1;<br>
+      }
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value: flex-grow:0</li>
+        <li>Flex-grow is always assigned to targets, not crossbow.</li>
+        <li>Justify content setting doesn't do anything if there is growing happening because there is no available space.</li>
+        <li>It can be good practice to set all flex-grow properties to: 1 then override and adjust ratios for items growing faster than peers. </li>
+        <li>Sometimes you will use align-self: x; in conjunction with flex-grow e.g. stretch.</li>
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="flex_shrink">
+    <header>
+      <h2>Flex Shrink<h2>
+    </header>
+    <ul>
+      <li>Where flex-grow deals with how items expand to fill available space, flex-shrink describes how items react when there's not enough space for them to fit.</li>
+      <li>This is defined using ratios similar to flex-grow e.g. an item with flex-shrink ratio of 3:1 will shrink 3 times faster than the default.</li>
+      <li>In 'Flexbox Zombies' - goos can both shrink and grow. If they don't shrink their flex-shrink is set to 0</li>
+    </ul>
+    <div id="container-CSS">
+    <h3 "id-container-CSS">CSS to flex-shrink flex items:</h3>
+
+    <code class="code-box">
+      flex-shrink: 1;
+
+    </code>
+  </div>
+<h3>Notes:</h3>
+    <ul>
+      <li>Default value: flex-shrink: 1;</li>
+          </ul>
+    <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+
+
+  <section class="main-section" id="flex_basis">
+    <header>
+      <h2>Flex Basis<h2>
+    </header>
+    <ul>
+      <li>The flex-basis property specifies the initial length of a flexible item.</li>
+      <li>Note: If the element is not a flexible item, the flex-basis property has no effect.</li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to initialise flexbox:</h3>
+
+    <code class="code-box">
+      flex-basis: number;<br>
+      flex-basis: auto;<br>
+      flex-basis: initial;<br>
+      flex-basis: inherit;<br>
+
+<br>
+e.g.<br>
+      div:nth-of-type(2) {<br>
+      flex-basis: 100px;<br>
+    }<br>
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li></li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="order">
+    <header>
+      <h2>Order<h2>
+    </header>
+    <ul>
+      <li>By default, flex items are laid out in the source order. </li>
+      <li>However, the order property controls the order in which they appear in the flex container.</li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to set order of flex items:</h3>
+
+    <code class="code-box">
+      order: number<br>
+      order: initial<br>
+      order: inherit<br>
+<br>
+e.g. <br>
+      div#myRedDIV {order: 2;}<br>
+      div#myBlueDIV {order: 4;}<br>
+      div#myGreenDIV {order: 3;}<br>
+      div#myPinkDIV {order: 1;}<br>
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li></li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="flex_wrap">
+    <header>
+      <h2>Flex Wrap<h2>
+    </header>
+    <ul>
+      <li>By default, flex items will all try to fit onto one line.</li>
+      <li>You can change that and allow the items to wrap as needed with this property.</li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to flex wrap:</h3>
+
+    <code class="code-box">
+    flex: nowrap<br>
+    flex: wrap<br>
+    flex: wrap-reverse<br>
+    <br>
+    e.g.<br>
+    div {<br>
+      display: flex;  <br>
+    flex-wrap: wrap;<br>
+    }
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value: nowrap (one line)</li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="align_content">
+    <header>
+      <h2>Align Content<h2>
+    </header>
+    <ul>
+      <li>This aligns a flex container’s lines within when there is extra space in the cross-axis.</li>
+      <li>It does this is a similar way as to how justify-content aligns indvidual items within main axis.</li>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to justify content along cross-axis:</h3>
+
+    <code class="code-box">
+      align-content: flex-start <br>
+      align-content: flex-end <br>
+      align-content: center <br>
+      align-content: space-between <br>
+      align-content: space-around <br>
+      align-content: space-evenly <br>
+      align-content: stretch <br>
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>Default value:align-content: flex-start</li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+
+
+  <section class="main-section" id="flex_shorthand">
+    <header>
+      <h2>Flex Shorthand<h2>
+    </header>
+    <ul>
+      <li>The three properties assigned to the .item class can be shortened in one line using the flex shorthand property.</li>
+      <li>You have to enter the values in this order:</li>
+      <ol>
+        <li>flex-grow</li>
+        <li>flex-shrink</li>
+        <li>flex-basis</li>
+      </ol>
+    </ul>
+    <div id="container-CSS">
+    <h3>CSS to initialise flexbox:</h3>
+
+    <code class="code-box">
+    e.g. <br>
+    .item { flex: 1 1 150px; }
+
+    </code>
+  </div>
+  <h3>Notes:</h3>
+      <ul>
+        <li>You can test code by resizing browser.</li>
+
+      </ul>
+      <p></p>
+
+  </section>
+
+
+
+
+
+  <br>
+  <hr>
+  <br>
+
+
+
+  <section class="main-section" id="conclusion">
+    <header>
+      <h2>Conclusion<h2>
+    </header>
+    <ul>
+      <li>Flexbox rocks! I hope you enjoyed my cheatsheet.</li>
+      <li>Note: this page fulfills JS testing criteria for freecodecamp.org responsive web project but I would like to finish it by adding the zombie flexbox examples and some screenshots.</li>
+      <li>I also hope to create a similar page for CSS grid - at least I have the structure now!</li>
+      <li>I could change some appearance and colours but I like the minimalism and contrast.</li>
+      <li>Could make navbar 100% height and not responsive to scroll.</li>
+    </ul>
+
+      <p></p>
+
+  </section>
+
+    <br>
+    <hr>
+    <br>
+
+
+
+
+  <footer name ="footer" id="footer" class="center">
+     Copyright 2021 - <a href="mailto:contact@talkwell.world" >Talkwell.world :)</a> (opens e-mail)</footer>
+</section>
+
+
+
+
+
+
+
+</body>
+
+
+
+</main>
+
+
+
+
+<script type="text/javascript"  src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js";>
+ </script>
+
+</html>

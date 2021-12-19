@@ -1,0 +1,59 @@
+* {
+
+  font-family: monospace;
+}
+
+nav{
+  width: 25%;
+  height: ;
+  float: left;
+  display: inline;
+  margin: 0;
+  padding: 20;
+  margin-right: 5px;
+  border-style: solid;
+  position: fixed;
+}
+
+section#main{
+  width: 65%;
+  float: left;
+  margin-left: 30%;
+  padding: 20;
+  display: inline;
+}
+
+h1 {
+  text-decoration: underline;
+  border-style: solid;
+  text-align: center;
+
+
+}
+
+h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+
+
+
+.code-box{
+  background-color: black;
+  color: white;
+  background-size: 100%;
+  width: 100%;
+}
+
+ #container-CSS{
+   background-color: black;
+   color: red;
+ }
+
+ @media screen and (max-width:600px) {
+     #navBar {
+         font-size:5px;
+         width: 20%;
+     }
+ }
